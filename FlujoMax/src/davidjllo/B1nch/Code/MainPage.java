@@ -30,7 +30,7 @@ public class MainPage {
 		// Hay que cuadrar la funcion de flujoMax para que encuentre el estado inicial y el final, o que los saque de la matriz Adj
 		
 		et = flujoMax(matrizAdj,0,5);
-		System.out.println(et);
+		System.out.println("El Flujo maximo y corte minimo del grafo es: " +et);
 		try {
 			MainScreen window = new MainScreen(matrizAdj,numAristas);
 			window.frame.setVisible(true);
@@ -44,6 +44,8 @@ public class MainPage {
 
 	public static void openCodesFile() {
         try {
+        	// Hay que especificar la direccion donde se encuentra el archivo de datos.txt, 
+        	// este se encuentra en parte de lo descargado del respositorio
             leerDatos = new Scanner(new File("C:/Users/Binch/Dropbox/Eclipse/FlujoMax/src/datos.txt"));
             
         } catch (Exception e) {

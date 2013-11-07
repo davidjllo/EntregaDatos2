@@ -22,26 +22,11 @@ public class MainScreen {
 	JFrame frame;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainScreen window = new MainScreen();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the application.
 	 */
 	public MainScreen(int [][] gRel, int numAristas) {
 		relaciones = new int[numAristas][numAristas];
+		System.out.println("La siguiente es la matriz de adjacencias del grafo dado: ");
 		for(int x=0; x<numAristas; x++){
 			for(int y=0; y<numAristas; y++){
 				relaciones[x][y] = gRel[x][y];
@@ -100,6 +85,7 @@ public class MainScreen {
 	}
 	public void paint(Graphics g){
 		g.drawOval(50, 50, 50, 50);
+		
 	}
 
 }
