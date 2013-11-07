@@ -1,0 +1,20 @@
+Flujo Max - Corte Min.
+
+grafo G=(V,E) inicial S, Final T, capacidad C, flujo f
+
+f=0
+esMax=false
+
+MIENTRAS not esMax HAGA
+contruir grafo Gf
+Encontrar ruta P de S a T en Gf
+SI la ruta P existe
+	ENTONCES actualice flujo f en P
+	SINO esMax=true && X= el conjunto de vertices en Gf es alcanzable desde S
+  Fin SI
+Fin MIENTRAS
+retorne f como flujo maximo y (X, V-X) como corte minimo
+
+FIN
+	
+

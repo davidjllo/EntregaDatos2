@@ -1,0 +1,12 @@
+FORD-FULKERSON(G (grafo), s (inicio) , t (final))
+
+    PARACADA ruta (u,v) en E(G)
+        HAGA f[u, v] = 0
+             f[v, u] = 0
+    MIENTRAS haya una ruta P de S a T en la red residual Gf
+        HAGA m = min{c(u, v)-f[u, v]: (u, v) es en p
+            PARACADA ruta (u, v) en p
+                HAGA f[u, v] = f[u, v] + m
+                     f[v, u] = - f[u, v]
+    FIN MIENTRAS
+
